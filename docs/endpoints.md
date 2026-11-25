@@ -165,3 +165,57 @@ Authorization: Bearer YOUR_ACCESS_TOKEN
 }
 ```
 
+
+---
+
+## 4. Update an Employee
+
+**Endpoint:** `/employees/{employeeId}`
+
+**HTTP Method:** PUT
+
+**Description:**
+
+Replaces an existing employee record using
+the employee's unique identification number.
+
+**Authentication:** Required
+
+**Path Parameters:**
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| employeeId | Integer | Yes | Employee record to update |
+
+**Example Request:**
+
+```http
+PUT /v1/employees/103 HTTP/1.1
+Host: api.boms-demo.com
+Authorization: Bearer YOUR_ACCESS_TOKEN
+Content-Type: application/json
+```
+
+**JSON Request Body:**
+
+```json
+{
+  "firstName": "Robert",
+  "lastName": "Brown",
+  "email": "robert@example.com",
+  "department": "Operations"
+}
+```
+
+**Example Response: 200 OK**
+
+```json
+{
+  "employeeId": 103,
+  "firstName": "Robert",
+  "lastName": "Brown",
+  "email": "robert@example.com",
+  "department": "Operations",
+  "status": "Active"
+}
+```
