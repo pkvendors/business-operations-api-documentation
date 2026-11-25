@@ -1,4 +1,4 @@
-# business-operations-api-documentation
+# Business Operations API Documentation
 API documentation for a fictional business operations application
 ## API Documentation
 
