@@ -23,6 +23,7 @@ The API uses JSON (JavaScript Object Notation) to exchange data.
 
 ## 5. API Versioning
 The API uses version numbers in its URL.
+
 Example:
 https://api.boms-demo.com/v1
 
