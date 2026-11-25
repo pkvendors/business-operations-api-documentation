@@ -219,3 +219,38 @@ Content-Type: application/json
   "status": "Active"
 }
 ```
+
+
+---
+
+## 5. Delete an Employee
+
+**Endpoint:** `/employees/{employeeId}`
+
+**HTTP Method:** DELETE
+
+**Description:**
+
+Deletes an employee record using the employee's
+unique identification number.
+
+**Authentication:** Required
+
+**Path Parameters:**
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| employeeId | Integer | Yes | Employee record to delete |
+
+**Example Request:**
+
+```http
+DELETE /v1/employees/103 HTTP/1.1
+Host: api.boms-demo.com
+Authorization: Bearer YOUR_ACCESS_TOKEN
+```
+
+**Example Response: 204 No Content**
+
+The employee record was successfully deleted.
+No response body is returned.
