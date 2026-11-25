@@ -64,3 +64,61 @@ Content-Type: application/json
 | department | String | Employee's department |
 | status | String | Employment status |
 
+
+
+---
+
+## 2. Create a New Employee
+
+**Endpoint:** `/employees`
+
+**HTTP Method:** POST
+
+**Description:**
+
+Creates a new employee record in the BOMS application.
+
+**Authentication:** Required
+
+**Request Body:**
+
+| Field | Type | Required | Description |
+|---|---|---|---|
+| firstName | String | Yes | Employee's first name |
+| lastName | String | Yes | Employee's last name |
+| email | String | Yes | Employee's email address |
+| department | String | Yes | Assigned department |
+
+**Example Request:**
+
+```http
+POST /v1/employees HTTP/1.1
+Host: api.boms-demo.com
+Authorization: Bearer YOUR_ACCESS_TOKEN
+Content-Type: application/json
+```
+
+**JSON Request Body:**
+
+```json
+{
+  "firstName": "Robert",
+  "lastName": "Brown",
+  "email": "robert@example.com",
+  "department": "Information Technology"
+}
+```
+
+**Example Response: 201 Created**
+
+```json
+{
+  "employeeId": 103,
+  "firstName": "Robert",
+  "lastName": "Brown",
+  "email": "robert@example.com",
+  "department": "Information Technology",
+  "status": "Active"
+}
+```
+
