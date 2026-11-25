@@ -122,3 +122,46 @@ Content-Type: application/json
 }
 ```
 
+
+---
+
+## 3. Retrieve an Individual Employee
+
+**Endpoint:** `/employees/{employeeId}`
+
+**HTTP Method:** GET
+
+**Description:**
+
+Retrieves an individual employee record using
+the employee's unique identification number.
+
+**Authentication:** Required
+
+**Path Parameters:**
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| employeeId | Integer | Yes | Unique employee identifier |
+
+**Example Request:**
+
+```http
+GET /v1/employees/103 HTTP/1.1
+Host: api.boms-demo.com
+Authorization: Bearer YOUR_ACCESS_TOKEN
+```
+
+**Example Response: 200 OK**
+
+```json
+{
+  "employeeId": 103,
+  "firstName": "Robert",
+  "lastName": "Brown",
+  "email": "robert@example.com",
+  "department": "Information Technology",
+  "status": "Active"
+}
+```
+
