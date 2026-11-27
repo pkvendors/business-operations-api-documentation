@@ -254,3 +254,5 @@ Authorization: Bearer YOUR_ACCESS_TOKEN
 
 The employee record was successfully deleted.
 No response body is returned.
+
+Add employee API endpoint documentation
